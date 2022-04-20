@@ -34,8 +34,7 @@ public class Question5
     for (int i=n;
         i > 0;
         i--) {
-      Scanner input = new Scanner(System.in);
-      int eachnum = input.nextInt();
+      int eachnum = in.nextInt();
       data.add(eachnum);
     }
 
