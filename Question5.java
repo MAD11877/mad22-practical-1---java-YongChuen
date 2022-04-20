@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+
 
 public class Question5
 {
@@ -28,16 +30,30 @@ public class Question5
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();
     int num = 0;
+    ArrayList<Integer> data = new ArrayList<>();
     for (int i=n;
         i > 0;
         i--) {
       Scanner input = new Scanner(System.in);
       int eachnum = input.nextInt();
-      if (eachnum > num) {
-        num = eachnum;
-      }
+      data.add(eachnum);
     }
-    System.out.print(num);
+
+    int mode = data.get(0);
+    int highest = 0;
+    for (int i = 0; i < n; i++) {
+        int value = data.get(i);
+        int count = 1;
+        for (int j = 0; j < n; j++) {
+            if (data.get(j) == value)
+                count++;
+            if (count > highest) {
+                mode = value;
+                highest = count;
+            }
+        }
+    }
+    System.out.print(mode);
     
   }
 }
