@@ -25,14 +25,12 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-    System.out.print("number of numbers: ");
     Scanner in = new Scanner(System.in);
     int n = in.nextInt();
     int num = 0;
     for (int i=n;
         i > 0;
         i--) {
-      System.out.print("number pls: ");
       Scanner input = new Scanner(System.in);
       int eachnum = input.nextInt();
       if (eachnum > num) {
